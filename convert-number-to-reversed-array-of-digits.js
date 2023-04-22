@@ -5,12 +5,14 @@
 // Change the Strings in the array to Numbers
 // Reverse the Array
 
-function digitize(n) {
-  return n
+const num = 123456789;
+
+const reverseStr = () => {
+  return num
     .toString()
     .split("")
-    .map((m) => Number(m))
-    .reverse();
-}
+    .reverse()
+    .map((num) => Number(num));
+};
 
-console.log(digitize(123456789));
+console.log(reverseStr());
