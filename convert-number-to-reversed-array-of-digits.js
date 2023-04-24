@@ -12,7 +12,7 @@ const reverseStr = () => {
     .toString()
     .split("")
     .reverse()
-    .map((num) => Number(num));
+    .map((n) => +n);
 };
 
 console.log(reverseStr());

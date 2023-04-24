@@ -4,11 +4,19 @@
 // Loop through the array
 // Check if the sheep === True , increase the Intial Value + 1
 
-function countSheeps(arrayOfSheep) {
-  // TODO May the force be with you
-  let counter = 0;
-  arrayOfSheep.map((m) => {
-    if (m === true) counter++;
-  });
-  return counter;
-}
+const sheeps = [true,  true,  true,  false,
+  true,  true,  true,  true ,
+  true,  false, true,  false,
+  true,  false, false, true ,
+  true,  true,  true,  true ,
+  false, false, true,  true];
+
+
+let count = 0;
+
+const countSheeps = () => {
+  sheeps.map((sheep) => (sheep === true ? count++ : null));
+  return count;
+};
+
+console.log(countSheeps());

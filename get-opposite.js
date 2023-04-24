@@ -1,5 +1,6 @@
-function getOpposite(number) {
-  return -number;
-}
 
-console.log(getOpposite(-9));
+
+const opposite = num => -num
+
+console.log(opposite(-9));
+console.log(opposite(9.3));

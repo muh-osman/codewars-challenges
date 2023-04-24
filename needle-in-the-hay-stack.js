@@ -8,16 +8,24 @@
 // Check if the element === needle
 // Return The Message
 
-function findNeedle(array) {
-  //   for (let i = 0; i < array.length; i++) {
-  //     if (array[i] === "needle") {
-  //       return "found the needle at position " + i;
-  //     }
-  //   }
 
-  return "found the needle at position " + array.indexOf("needle");
+// Method 1
+function findNeedle(array) {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] === "needle") {
+        return "found the needle at position " + i;
+      }
+    }
 }
 
-console.log(
-  findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"])
-);
+console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
+
+
+
+
+// Method 2
+const arr = ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]
+
+const needle = () => `found the needle at position: ${arr.indexOf('needle')}`
+
+console.log(needle())

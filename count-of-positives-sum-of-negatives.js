@@ -33,3 +33,27 @@ console.log(
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15,
   ])
 );
+
+
+// Method 2
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15];
+const newArr = [];
+let count = 0;
+let sum = 0;
+
+function countOfPositivesSumOfNegatives() {
+  arr.map((num) => {
+    if (num > 0) {
+      count += 1;
+    } else {
+      num += sum;
+    }
+  });
+
+  newArr.push(count);
+  newArr.push(sum);
+
+  return newArr;
+}
+
+console.log(countOfPositivesSumOfNegatives());
