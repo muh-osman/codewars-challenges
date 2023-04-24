@@ -4,11 +4,12 @@
 // Loop through the Array
 // Repeat Each Element Once
 // Return the Array Into String again
-function doubleChar(str) {
-  return str
-    .split("")
-    .map((s) => s.repeat(2))
-    .join("");
+
+
+
+const str = 'ahmed'
+const double = () => {
+  return str.split('').map(letter => letter.repeat(2)).join('')
 }
 
-console.log(doubleChar("ahmed"));
+console.log(double())
