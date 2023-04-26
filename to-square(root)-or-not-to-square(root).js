@@ -11,19 +11,53 @@
 // If true Take the root , if False Square the number
 // Return the New Array
 
+// Method 1
 function squareOrSquareRoot(array) {
-  //   let newArray = [];
-  //   for (let i = 0; i < array.length; i++) {
-  //     if (Number.isInteger(Math.sqrt(array[i]))) {
-  //       newArray.push(Math.sqrt(array[i]));
-  //     } else {
-  //       newArray.push(array[i] * array[i]);
-  //     }
-  //   }
-  //   return newArray;
-
-  return array.map((number) =>
-    Number.isInteger(Math.sqrt(number)) ? Math.sqrt(number) : number * number
-  );
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+      if (Number.isInteger(Math.sqrt(array[i]))) {
+        newArray.push(Math.sqrt(array[i]));
+      } else {
+        newArray.push(array[i] * array[i]);
+      }
+    }
+    return newArray;
 }
+
 console.log(squareOrSquareRoot([4, 3, 9, 7, 2, 1]));
+
+
+
+
+// Method 2
+// function squareOrSquareRoot(array) {
+
+//   return array.map((number) =>
+//     Number.isInteger(Math.sqrt(number)) ? Math.sqrt(number) : number * number
+//   );
+// }
+
+// console.log(squareOrSquareRoot([4, 3, 9, 7, 2, 1]));
+
+
+
+
+// Method 3
+const arr = [4, 3, 9, 7, 2, 1];
+const newArr = [];
+
+const math = () => {
+
+  arr.map(num => {
+    if (Math.sqrt(num) % 1 === 0) {
+      newArr.push(Math.sqrt(num));
+    } else {
+      newArr.push(Math.pow(num, 2));
+    }
+  });
+
+  return newArr
+};
+
+
+console.log(math());

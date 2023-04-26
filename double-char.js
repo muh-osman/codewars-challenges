@@ -8,6 +8,7 @@
 
 
 const str = 'ahmed'
+
 const double = () => {
   return str.split('').map(letter => letter.repeat(2)).join('')
 }

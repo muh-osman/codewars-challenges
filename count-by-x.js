@@ -27,3 +27,21 @@ console.log(countBy(2, 5));
 // Read About Arrays , Array.from , Array.keys
 // Slice Method , Map Method
 // From MDN or W3Schools
+
+
+
+
+// Method 2
+let arr = []
+let init = 0
+const duplicate = (x, n) => {
+
+  for (let i = 0; i < n; i++) {
+    init += x // init = init + x
+    arr.push(init)
+  }
+
+  return arr
+}
+
+console.log(duplicate(2, 5)) // [2, 4, 6, 8, 10]
