@@ -5,9 +5,20 @@
 
 // Note: Don't worry, all inputs will be strings, and every string is a perfectly valid representation of an integral number.
 
+
+// Method 1
 var stringToNumber = function (str) {
-  //   return Number(str);
-  return +str;
+    return Number(str);
 };
 
-console.log(typeof stringToNumber("132"));
+console.log(stringToNumber("132"));
+
+
+
+
+
+// Method 2
+const str = "132"
+const convert = () => +str
+
+console.log(convert())

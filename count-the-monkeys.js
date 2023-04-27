@@ -11,6 +11,8 @@
 // Push the NUmber to the new Array
 // Return the Array
 
+
+// Method 1
 function monkeyCount(n) {
   let newArray = [];
   for (let i = 1; i <= n; i++) {
@@ -20,3 +22,21 @@ function monkeyCount(n) {
 }
 
 console.log(monkeyCount(10));
+
+
+
+
+
+// Method 2
+let arr = [];
+let inti = 0;
+
+const count = (num) => {
+  for (let i = 0; i < num; i++) {
+    inti++;
+    arr.push(inti);
+  }
+  return arr;
+};
+
+console.log(count(30));

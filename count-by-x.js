@@ -12,21 +12,27 @@
 // Add the number to the new Array
 // Return the new array
 
+
+// Method 1
 function countBy(x, n) {
-  //   let newArray = [];
-  //   for (let i = 1; i <= n; i++) {
-  //     newArray.push(x * i);
-  //   }
-  //   return newArray;
   return Array.from(Array(n + 1).keys())
     .slice(1)
-    .map((number) => number * x);
+    .map(number => number * x);
 }
 console.log(countBy(2, 5));
 
-// Read About Arrays , Array.from , Array.keys
-// Slice Method , Map Method
-// From MDN or W3Schools
+
+
+
+// Method 2
+function countBy(x, n) {
+    let newArray = [];
+    for (let i = 1; i <= n; i++) {
+      newArray.push(x * i);
+    }
+    return newArray;
+}
+console.log(countBy(1, 10));
 
 
 

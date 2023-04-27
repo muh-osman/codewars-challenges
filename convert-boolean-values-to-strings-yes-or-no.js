@@ -3,13 +3,28 @@
 /* Solution */
 
 // Check if the Argument , if True Return 'yes' , if not return 'no'
-function boolToWord(bool) {
-  //   if (bool == true) {
-  //     return "Yes";
-  //   } else {
-  //     return "No";
-  //   }
 
-  return bool ? "Yes" : "No";
+
+// Method 1
+function boolToWord(bool) {
+    if (bool == true) {
+      return "Yes";
+    } else {
+      return "No";
+    }
 }
 console.log(boolToWord(true));
+
+
+
+
+// Method 2
+const convert = (boolean) => boolean ? 'Yes' : 'No'
+
+console.log(convert(false))
+
+
+
+
+
+

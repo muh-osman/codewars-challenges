@@ -2,8 +2,28 @@
 
 // What ways of achieving this do you know?
 
+
+// Method 1
 function numberToString(num) {
-  //   return num.toString();
   return `${num}`;
 }
-console.log(typeof numberToString(123) + numberToString(123));
+console.log(numberToString(123));
+
+
+
+
+// Method 2
+let num = 999
+const convert = () => num.toString()
+
+console.log(convert())
+
+
+
+
+
+
+
+
+
+

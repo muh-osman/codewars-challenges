@@ -9,7 +9,10 @@
 // Reverse the Array
 // Turn the Array into String
 
-function reverse(string) {
-  return string.split(" ").reverse().join(" ");
-}
-console.log(reverse("hello World"));
+
+
+let str = "hello World"
+
+const reverse = () => str.split(' ').reverse().join(' ')
+
+console.log(reverse())
