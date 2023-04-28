@@ -20,8 +20,20 @@ function areYouPlayingBanjo(name) {
   //     ? `${name} plays banjo`
   //     : `${name} does not pLays Banjo`;
 
+  // Method 1
   return /^r/i.test(name)
     ? `${name} plays banjo`
     : `${name} does not play banjo`;
 }
 console.log(areYouPlayingBanjo("Rami"));
+
+
+
+
+// Method 2
+const playingBanjo = name =>
+  name.startsWith("R") || name.startsWith("r")
+    ? name + " plays banjo"
+    : name + " does not play banjo";
+
+console.log(playingBanjo("rama"));

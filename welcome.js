@@ -17,6 +17,7 @@
 // if exist , return the welcome with the Language
 // if not exist, return the Default which is English
 
+// Method 1
 function greet(language) {
   let languages = {
     english: "Welcome",
@@ -44,3 +45,24 @@ function greet(language) {
   }
 }
 console.log(greet("frenc"));
+
+
+
+
+
+// Method 2
+let languages = {
+  arabic: "مرحبا",
+  english: "Welcome",
+  czech: "Vitejte",
+  danish: "Velkomst",
+  dutch: "Welkom",
+  estonian: "Tere tulemast",
+  finnish: "Tervetuloa",
+  flemish: "Welgekomen",
+  french: "Bienvenue",
+};
+
+const welcome = (lang = "english") => languages[lang]
+
+console.log(welcome("arabic"));

@@ -4,8 +4,18 @@
 //   but you should add spaces between each word. Be careful,
 //  there shouldn't be a space at the beginning or the end of the sentence!
 
+// Method 1
 function smash(words) {
   return words.join(" ");
 }
 
 console.log(smash(["hello", "my", "name", "is", "ahmed"]));
+
+
+
+// Method 2
+const arr = ["hello", "my", "name", "is", "ahmed"]
+
+const smash2 = () => arr.join(' ')
+
+console.log(smash2())

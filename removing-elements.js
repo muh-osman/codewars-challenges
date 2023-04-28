@@ -15,24 +15,23 @@
 // Remove that Element
 // Return the New Array
 
-function removeEveryOther(arr) {
-  //   let newArray = [];
-  //   for (let i = 0; i < arr.length; i++) {
-  //     if (i % 2 === 0) {
-  //       newArray.push(arr[i]);
-  //     }
-  //   }
-  //   return newArray;
-  return arr.filter((a, i) => i % 2 === 0);
-}
-console.log(
-  removeEveryOther([
-    "Keep",
-    "Remove",
-    "Keep",
-    "Remove",
-    "Keep",
-    "Remove",
-    "Keep",
-  ])
-);
+
+
+
+
+const arr = ["Keep", "Remove", "Keep", "Remove", "Keep", "Remove", "Keep"];
+const newArr =[]
+const remove = () => {
+  
+  for (let i = 0; i < arr.length; i++) {
+    if (i % 2 === 0) {
+      newArr.push(arr[i])
+    }
+  }
+  return newArr
+  
+  // Method 2
+  // return arr.filter((el, index) => index % 2 == 0)
+};
+
+console.log(remove());
