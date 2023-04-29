@@ -6,7 +6,6 @@
 
 // The array will never be empty.
 
-
 // 1- Declare Sum Variable to Sum all the Numbers
 // 2- Declare Empty Variable for the average
 // 3- Looping through the Array of number
@@ -15,16 +14,26 @@
 // 6- Round the Number to the Nearest Integer
 // 7- Return the Average
 
-
-function getAverage(marks){
-    //TODO : calculate the downward rounded average of the marks array
-    // let sum = 0;
-    // let average;
-    // for(let i =0 ; i<marks.length; i++){
-    //     sum += marks[i];
-    // }
-    // average = sum / marks.length;
-    // return Math.floor(average);
-    return Math.floor(marks.reduce( ((acc,num) => acc + num),0) / marks.length )
+// Method 1
+function getAverage(marks) {
+  let sum = 0;
+  let average;
+  for (let i = 0; i < marks.length; i++) {
+    sum += marks[i];
+  }
+  average = sum / marks.length;
+  return Math.floor(average);
 }
-console.log(getAverage([35.4,24.8,12.6,15.9,60.7]));
+console.log(getAverage([35.4, 24.8, 12.6, 15.9, 60.7]));
+
+
+
+
+
+// Method 2
+let arr = [35.4, 24.8, 12.6, 15.9, 60.7];
+
+const average = () =>
+  Math.floor(arr.reduce((prev, curr) => prev + curr) / arr.length);
+
+console.log(average());

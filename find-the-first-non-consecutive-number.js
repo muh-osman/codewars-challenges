@@ -17,10 +17,24 @@
 // Check if the Element of the Current Index Larger than the Previous by 1 , Continue
 // If Not Return that Element
 // Return Null if all the Number are consectutive
-function firstNonConsecutive(arr) {
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] - 1 !== arr[i - 1]) return arr[i];
+
+
+
+
+// const arr = [1, 2, 3, 4, 6, 7, 8];
+const arr = [5, 6, 7, 10, 11];
+// const arr = [5, 6, 7, 8];
+
+const nonConsecutive = () => {
+
+  for (let i = 0; i < arr.length - 1; i++) {
+
+    if (arr[i] + 1 !== arr[i + 1]) {
+      return arr[i + 1];
+    }
+    
   }
-  return null;
-}
-console.log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8]));
+  return null
+};
+
+console.log(nonConsecutive()); 

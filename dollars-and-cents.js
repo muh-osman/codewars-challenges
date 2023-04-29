@@ -8,7 +8,21 @@
 // function although you will need to account for adding trailing zeros if they are missing
 // (though you won't have to worry about a dangling period).
 
+// Method 1
 function formatMoney(amount) {
   return `$${amount.toFixed(2)}`;
 }
-console.log(formatMoney(2.51));
+console.log(formatMoney(2.5));
+
+
+
+// Method 2 ..Credits: stack overflow
+const format = num => num.toLocaleString('en-US', {
+  style: 'currency',
+  currency: 'USD',
+})
+
+
+console.log(format(3.99))  // 3.99 => $3.99
+console.log(format(3))    // 3 => $3.00
+console.log(format(3.1)) // 3.1 => $3.10

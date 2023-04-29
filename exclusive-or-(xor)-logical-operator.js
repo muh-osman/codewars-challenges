@@ -12,7 +12,24 @@
 //   Your xor function should have the behaviour described above,
 //  returning true if exactly one of the two expressions evaluate to true, false otherwise.
 
+
+// Method 1
 function xor(a, b) {
   return a === b ? false : true;
 }
-console.log(xor(false, false));
+
+console.log(xor(false, false)) //false
+console.log(xor(true, false)) //true
+console.log(xor(false, true)) //true
+console.log(xor(true, true)) //false
+
+
+
+
+// Method 2
+const or = (a, b) => a ^ b ? true : false
+
+console.log(or(false, false)) //false
+console.log(or(true, false)) //true
+console.log(or(false, true)) //true
+console.log(or(true, true)) //false
