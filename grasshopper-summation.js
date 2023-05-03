@@ -8,13 +8,25 @@
 // Add the Number
 // Return the Result
 
+// Method 1
 var summation = function (num) {
-    // let result = 0;
-    // for(let i = 0; i <= num; i++){
-    //     result += i;
-    // }
-    // return result;
-    return Array(num).fill(true).reduce((acc, curretValue, index) => acc + index + 1, 0);
-  }
+  return Array(num)
+    .fill(true)
+    .reduce((acc, curretValue, index) => acc + index + 1, 0);
+};
 
-  console.log(summation(10));
+console.log(summation(10));
+
+
+
+
+// Method 2
+const sum = (num) => {
+  let result = 0;
+  for (let i = 1; i <= num; i++) {
+    result += i; // result = result + i
+  }
+  return result;
+};
+
+console.log(sum(10)); // 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55
