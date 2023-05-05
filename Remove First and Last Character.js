@@ -9,4 +9,4 @@ function removeChar(str) {
     return str.slice(1, -1);
 };
 
-console.log(removeChar('ABC'));
+console.log(removeChar('AbcdeF'));
