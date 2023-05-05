@@ -4,8 +4,9 @@
 
 // Words are separated by exactly one space and there are no leading or trailing spaces.
 
-
-function reverseWords(str){
-    return str.split(' ').reverse().join(' ');
+function reverseWords(str) {
+  return str.split(" ").reverse().join(" ");
 }
-console.log(reverseWords('The greatest victory is that which requires no battle'));
+console.log(
+  reverseWords("The greatest victory is that which requires no battle")
+);

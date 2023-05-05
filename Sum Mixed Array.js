@@ -8,6 +8,7 @@
 // Convert every String to a Number
 // Sum All The Values
 
+// Method 1
 function sumMix(x){
     // let newNumbersArray = [];
     // for(let i = 0; i< x.length; i++){
@@ -23,3 +24,12 @@ function sumMix(x){
 
 console.log(sumMix([3,'9',5,'10','13',5]));
 
+
+
+
+
+
+// Method 2
+const sum = arr => arr.reduce((acc, cur) => +acc + +cur)
+
+console.log(sum([3,'9',5,'10','13',5]))

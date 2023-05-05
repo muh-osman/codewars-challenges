@@ -7,8 +7,24 @@
 // If Alex gets 10 or more hoops, return the string "Great, now move on to tricks".
 // If he doesn't get 10 hoops, return the string "Keep at it until you get it".
 
-
+// Method 1
 function hoopCount(n) {
-    return n >= 10 ? 'Great, now move on to tricks' : 'Keep at it until you get it';
+  return n >= 10
+    ? "Great, now move on to tricks"
+    : "Keep at it until you get it";
 }
 console.log(hoopCount(10));
+
+
+
+
+// Method 2
+const hoop = (num) => {
+  if (num >= 10) {
+    return "Great, now move on to tricks";
+  } else {
+    return "Keep at it until you get it";
+  }
+};
+
+console.log(hoop(10));

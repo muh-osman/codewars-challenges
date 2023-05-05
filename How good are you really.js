@@ -1,6 +1,5 @@
 // How good are you really?
 
-
 // There was a test in your class and you passed it. Congratulations!
 // But you're an ambitious person. You want to know if you're better than the average student in your class.
 
@@ -8,11 +7,22 @@
 
 // Return True if you're better, else False!
 
-
-
+// Method 1
 function betterThanAverage(classPoints, yourPoints) {
-    return yourPoints > classPoints.reduce((acc, currentValue) => acc + currentValue, 0) / classPoints.length ? true : false;
+  return yourPoints >
+    classPoints.reduce((acc, currentValue) => acc + currentValue, 0) /
+      classPoints.length
+    ? true
+    : false;
 }
 console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75));
-  
 
+
+
+
+
+// Method 2
+const average = (arr, youAvg) =>
+  youAvg > arr.reduce((acc, cur) => acc + cur) / arr.length;
+
+console.log(average([100, 40, 34, 57, 29, 72, 57, 88], 75));

@@ -8,8 +8,15 @@
 //  (because these are the circumstances under which you need to set an alarm). It should return false otherwise
 
 
-
-function setAlarm(employed, vacation){
-    return employed && !vacation
+// Method 1
+function setAlarm(employed, vacation) {
+  return employed && !vacation;
 }
-console.log(setAlarm(false,true))
+console.log(setAlarm(false, true));
+
+
+
+// Method 2
+const alarm = (employed, vacation) => (employed && !vacation ? true : false);
+
+console.log(alarm(false, true));

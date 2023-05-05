@@ -8,18 +8,43 @@
 
 // For example, when the input is green, output should be yellow.
 
-
 // Create array of lighs
 // Check if the Light is red to Return the Green
 // Return the Next Color
 
+
+// Method 1
 function updateLight(current) {
-//   let lightsArray = ['green','yellow','red'];
-//   if(lightsArray.indexOf(current) === 2){
-//     return 'green';
-//   }else{
-//     return lightsArray[lightsArray.indexOf(current) + 1]
-//   }
-return current === 'yellow' ? 'red' : current === 'green' ? 'yellow' : 'green';
+  //   let lightsArray = ['green','yellow','red'];
+  //   if(lightsArray.indexOf(current) === 2){
+  //     return 'green';
+  //   }else{
+  //     return lightsArray[lightsArray.indexOf(current) + 1]
+  //   }
+  return current === "yellow"
+    ? "red"
+    : current === "green"
+    ? "yellow"
+    : "green";
 }
-console.log(updateLight('yellow'));
+console.log(updateLight("yellow"));
+
+
+
+
+
+
+
+// Method 2
+const update = (str) => {
+  switch (str) {
+    case "green":
+      return "yellow";
+    case "yellow":
+      return "red";
+    case "red":
+      return "green";
+  }
+};
+
+console.log(update("yellow"));

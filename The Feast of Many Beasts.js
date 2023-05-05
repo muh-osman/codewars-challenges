@@ -1,6 +1,6 @@
 // The Feast of Many Beasts
 
-// All of the animals are having a feast! Each animal is bringing one dish. 
+// All of the animals are having a feast! Each animal is bringing one dish.
 // There is just one rule: the dish must start and end with the same letters as the animal's name.
 //  For example, the great blue heron is bringing garlic naan and the chickadee is bringing chocolate cake.
 
@@ -10,21 +10,38 @@
 // Assume that beast and dish are always lowercase strings, and that each has at least two letters.
 //  beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string.
 //   They will not contain numerals.
-// // 
-
+// //
 
 // Get the first and Last Element in Each Word
 // Check if the Letters are Equal
 
+// Method 1
 function feast(beast, dish) {
-    // let beastLetters = beast[0] + beast[beast.length -1];
-    // let dishLetters = dish[0] + dish[dish.length -1];
-    // if(beastLetters === dishLetters){
-    //     return true;
-    // }else{
-    //     return false;
-    // }
-    return beast[0] === dish[0] && beast[beast.length -1] === dish[dish.length -1];
+  // let beastLetters = beast[0] + beast[beast.length -1];
+  // let dishLetters = dish[0] + dish[dish.length -1];
+  // if(beastLetters === dishLetters){
+  //     return true;
+  // }else{
+  //     return false;
+  // }
+  return (
+    beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]
+  );
 }
 
 console.log(feast("brown bear", "bear claw"));
+
+
+
+
+
+
+// Method 2
+const check = (x, y) => {
+  if (x[0] === y[0] && x[x.length - 1] === y[y.length - 1]) {
+    return true;
+  } else {
+    return false;
+  }
+};
+console.log(check("brown bear", "bear claw"));
