@@ -5,6 +5,7 @@
 
 
 
+// Method 1
 function powersOfTwo(n) {
     return Array(n + 1).fill(0).map((n, i) => n + i).map((n) => Math.pow(2, n));
 }
@@ -16,17 +17,7 @@ console.log(powersOfTwo(4));
 
 
 
+// Method 2
+const res = (num) => Array(num + 1).fill(2).map((el, i) => Math.pow(el, i))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(res(4)) // [1, 2, 4, 8, 16]

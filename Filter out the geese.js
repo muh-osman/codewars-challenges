@@ -4,6 +4,7 @@
 //  and returns a filtered list containing the same elements but with the 'geese' removed.
 
 
+// Method 1
 function gooseFilter (birds) {
     let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
     
@@ -13,3 +14,13 @@ function gooseFilter (birds) {
     return uniqueResults;
 };
 console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]))
+
+
+
+// Method 2 (Short)
+var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+
+const filterArr = (birdsArr) => birdsArr.filter( (bird) => !geese.includes(bird) )
+
+
+console.log(filterArr(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]))

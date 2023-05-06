@@ -6,7 +6,7 @@
 // It is your job to fix the code and get the program working again!
 
 
-
+// 😂
 function sayHello(name) {
     return `Hello, ${name}`
 }
